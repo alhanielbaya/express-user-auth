@@ -1,0 +1,26 @@
+.c-navbar {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.navbar__item {
+  display: none;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-menu-icon {
+  display: block;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu-icon {
+    display: none;
+  }
+  .navbar__item {
+    display: block;
+  }
+}

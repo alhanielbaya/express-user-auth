@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card column col-12 mt-2">
+    <div class="card-header">
+      <div class="card-title h5">Login</div>
+    </div>
+    <form action="/users/login" method="POST">
+      <div class="card-body">
+        <% include ./partials/messages %>
+
+        <div class="form-group">
+          <label class="form-label" for="input-example-1">Email</label>
+          <input
+            class="form-input "
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+          <label class="form-label" for="input-example-1">Password</label>
+          <input
+            class="form-input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+            value="<%= typeof password != 'undefined' ? password : ''%>"
+          />
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

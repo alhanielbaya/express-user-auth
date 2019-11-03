@@ -1,0 +1,10 @@
+<% if(typeof registerSuccess !== 'undefined' && registerSuccess) { %>
+<div class="toast toast-success mt-2 p-2" id="toast-success-register">
+  <button
+    class="btn btn-clear float-right"
+    type="button"
+    onclick="document.getElementById(`toast-success-register`).style.display = 'none'"
+  ></button>
+  Succesfully registered. You can now login with your account.
+</div>
+<% } %>

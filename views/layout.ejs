@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <base href="/">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="spectre.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="spectre-exp.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="spectre-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="/main.css" />
+    <title>Express App</title>
+  </head>
+  <body>
+    <div class="c-navbar ">
+      <header class="navbar p-2 ">
+        <section class="navbar-section ">
+          <div class="navbar-menu-icon px-2 text-primary">&#9776;</div>
+          <a href="/" class="navbar-brand">
+            Node-Login
+          </a>
+        </section>
+
+        <section class="navbar-section hide-sm">
+          <% if(!isLoggedIn) { %>
+          <a href="/users/login" class="btn btn-lg btn-link">
+            Login
+          </a>
+          <a href="/users/register" class="btn btn-lg btn-link">
+            Register
+          </a>
+          <% } else { %>
+            <a href="/dashboard" class="btn btn-lg btn-link">
+            Dashboard
+          </a>
+            <a href="/users/logout" class="btn btn-lg btn-link">
+            Logout, <%= userName %>
+          </a>
+          <% } %>
+        </section>
+      </header>
+    </div>
+
+    <div class="sidebar p-fixed show-sm bg-secondary">
+      <ul class="nav ">
+        <li class="nav-item h2">
+          <a href="/users/login">Login</a>
+        </li>
+        <li class="nav-item h2">
+          <a href="/users/register">Register</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-container">
+      <%- body %>
+    </div>
+  </body>
+</html>

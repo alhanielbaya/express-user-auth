@@ -1,0 +1,58 @@
+<% if(typeof errors !== 'undefined') { 
+  
+    errors.forEach(function(error, index) {
+  %>
+
+
+<div class="toast toast-error mt-2 p-2" id="toast<%= index %>">
+  <button
+    class="btn btn-clear float-right"
+    type="button"
+    onclick="document.getElementById(`toast<%= index %>`).style.display = 'none'"
+  ></button>
+  <%= error.msg %>
+</div>
+  <% }); %> 
+
+<% } %>
+
+
+
+<% if(success_msg.length) { %>
+
+<div class="toast toast-success mt-2 p-2" id="toast-success-register">
+  <button
+    class="btn btn-clear float-right"
+    type="button"
+    onclick="document.getElementById(`toast-success-register`).style.display = 'none'"
+  ></button>
+  <%= success_msg.join('') %>
+</div>
+
+<% } %>
+
+
+
+
+<% if(error_msg.length) { %>
+<div class="toast toast-error mt-2 p-2" id="toast-error-register">
+  <button
+    class="btn btn-clear float-right"
+    type="button"
+    onclick="document.getElementById(`toast-error-register`).style.display = 'none'"
+  ></button>
+  <%= error_msg.join('') %>
+</div>
+<% } %>
+
+
+<% if(error.length) { %>
+<div class="toast toast-error mt-2 p-2" id="toast-error-login">
+  <button
+    class="btn btn-clear float-right"
+    type="button"
+    onclick="document.getElementById(`toast-error-login`).style.display = 'none'"
+  ></button>
+  <%= error.join('') %>
+</div>
+<% } %>

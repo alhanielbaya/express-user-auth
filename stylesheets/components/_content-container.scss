@@ -1,0 +1,11 @@
+.content-container {
+  max-width: 800px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 800px) {
+  .content-container {
+    padding: .5rem 2rem;
+  }
+}
